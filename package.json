@@ -1,0 +1,31 @@
+{
+  "name": "oscar-app-back",
+  "version": "1.0.0",
+  "description": "Backend",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app",
+    "dev": "nodemon src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiovaneKayser/oscar-app-back.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Giovane Matheus Kayser Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GiovaneKayser/oscar-app-back/issues"
+  },
+  "homepage": "https://github.com/GiovaneKayser/oscar-app-back#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
