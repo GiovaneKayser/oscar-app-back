@@ -10,9 +10,7 @@ class App {
     this.middlewares();
     this.routes();
 
-    this.express.listen(3001, () =>
-      console.log(`http://localhost:3001 `)
-    );
+    this.express.listen(3000, () => console.log(`http://localhost:3000`));
   }
 
   database() {
