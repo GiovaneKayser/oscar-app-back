@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./database/config");
+const db = require("./src/database/config");
 const mongoose = require("mongoose");
 
 class App {
@@ -22,7 +22,7 @@ class App {
   }
 
   routes() {
-    this.express.use(require("./routes"));
+    this.express.use(require("./src/routes"));
   }
 }
 module.exports = new App().express;
