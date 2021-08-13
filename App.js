@@ -1,7 +1,7 @@
 const express = require("express");
 const db = require("./src/database/config");
 const mongoose = require("mongoose");
-
+const cors = require("cors");
 class App {
   constructor() {
     this.express = express();
@@ -9,7 +9,7 @@ class App {
     this.database();
     this.middlewares();
     this.routes();
-
+    
     this.express.listen(process.env.PORT || 3000, () =>
       console.log(`http://localhost:3000`)
     );
@@ -21,6 +21,7 @@ class App {
 
   middlewares() {
     this.express.use(express.json());
+    this.express.use(cors());
   }
 
   routes() {
