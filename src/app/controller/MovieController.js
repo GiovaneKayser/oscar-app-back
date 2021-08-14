@@ -2,7 +2,6 @@ const Movie = require("../models/Movie");
 
 class MovieController {
   async store(req, res) {
-    console.log(req);
     const data = await Movie.create(req.body);
 
     return res.json(data);
@@ -11,6 +10,10 @@ class MovieController {
     const data = await Movie.find({});
 
     return res.json(data);
+  }
+  async page(req, res) {
+    const movies = await Movie.find({});
+    return res.render("pages/Movies", { movies: movies });
   }
 }
 

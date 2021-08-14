@@ -10,4 +10,6 @@ routes.post("/Movie", MovieController.store);
 
 routes.get("/", IndexController.index);
 
+routes.get("/Movie/Page", MovieController.page);
+
 module.exports = routes;

@@ -1,0 +1,29 @@
+<div>
+    <% movies.forEach(movie => { %>
+        <div style="border:black solid 1px;border-radius:25px;padding:10px; margin:10px; ">
+            <p><strong>nome:</strong> <%= movie.title %> </p>
+            <p><strong>imagem:</strong> <%= movie.imgUrl %>  </p>
+            <p><strong>ano:</strong> <%= movie.year %>  </p>
+            <p><strong>scoreIMDB:</strong> <%= movie.scoreIMDB %>  </p>
+            <p><strong>duration:</strong> <%= movie.duration %>  </p>
+            <p><strong>Numero:</strong> <%= movie.numberIndication %>  </p>
+        </div>
+    <% }) %>
+</div>
+<form action="/Movie" method="POST" style="
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    ">
+    <label for="title">Título: </label>
+    <input type="text" name="title" id="title"> <br>
+    <label for="imgUrl">Imagem Url: </label>
+    <input type="text" name="imgUrl" id="imgUrl"><br>
+    <label for="year">Ano: </label>
+    <input type="text" name="year" id="year"><br>
+    <label for="duration">Duração: </label>
+    <input type="text" name="duration" id="duration"><br>
+    <label for="numberIndication">Número de indicações: </label>
+    <input type="text" name="numberIndication" id="numberIndication"><br>
+    <button type="submit">Adicionar</button>
+</form>
